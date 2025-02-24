@@ -1,0 +1,95 @@
+﻿<Window x:Class="TripMaintanance.BusMaintain"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TripMaintanance"
+        mc:Ignorable="d"
+        Title="BusMaintain" Height="430" Width="400">
+    <Grid Background="#FF171717">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Label Grid.Row="0" Foreground="White" FontWeight="Bold" 
+               FontSize="64" Grid.ColumnSpan="3">Manage bus</Label>
+
+        <StackPanel Grid.Row="1" Background="#FF151515">
+            <Grid>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+
+                <Label Grid.Row="0" Foreground="White" FontWeight="Bold">Bus name:</Label>
+                <TextBox Grid.Row="0" Name="txtBusName" Grid.Column="1" 
+                         Margin="5, 5, 5, 5" Background="#FF383838" BorderBrush="#FF383838" 
+                         Foreground="White" SelectionBrush="#FF383838" 
+                         FontWeight="Bold"></TextBox>
+
+                <Label Grid.Row="1" Foreground="White" FontWeight="Bold">Position:</Label>
+                <TextBox Grid.Row="1" Name="txtBusPosition" Grid.Column="1" 
+                         Margin="5, 5, 5, 5" Background="#FF383838" BorderBrush="#FF383838" 
+                         Foreground="White" SelectionBrush="#FF383838" FontWeight="Bold"></TextBox>
+
+                <Label Grid.Row="2" Foreground="White" FontWeight="Bold">Available:</Label>
+                <TextBox Grid.Row="2" Name="txtAvailable" Grid.Column="1" 
+                         Margin="5, 5, 5, 5" Background="#FF383838" BorderBrush="#FF383838" 
+                         Foreground="White" SelectionBrush="#FF383838" FontWeight="Bold"></TextBox>
+
+            </Grid>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Background="#FF2C2C2C">
+            <Grid>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="180"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="130"/>
+                    <ColumnDefinition Width="130"/>
+                    <ColumnDefinition Width="130"/>
+                </Grid.ColumnDefinitions>
+
+                <ListView HorizontalAlignment="Stretch" Margin="10"
+                    VerticalAlignment="Stretch" Name="BusList" Grid.ColumnSpan="3" 
+                    Foreground="Black" FontWeight="Bold" MouseLeftButtonUp="BookingList_MouseLeftButtonUp">
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn Header="Bus name" 
+                        DisplayMemberBinding="{Binding BusName}" 
+                        Width="130"></GridViewColumn>
+                            <GridViewColumn Header="Bus position" 
+                        DisplayMemberBinding="{Binding Position}" 
+                        Width="130"></GridViewColumn>
+                            <GridViewColumn Header="Available" 
+                        DisplayMemberBinding="{Binding Available}"
+                        Width="130"></GridViewColumn>
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+
+                <Button Grid.Row="1" Grid.Column="0" Margin="5" Click="btnViewBook" BorderBrush="#FF383838" Background="#FF383838" Foreground="White">
+                    View
+                </Button>
+                <Button Grid.Row="1" Grid.Column="1" Margin="5" Click="btnUpdateBook" Background="#FF383838" BorderBrush="#FF383838" Foreground="White">
+                    Update
+                </Button>
+                <Button Grid.Row="1" Grid.Column="2" Margin="5" Click="btnExit" Background="#FF383838" BorderBrush="#FF383838" Foreground="White">
+                    Exit
+                </Button>
+            </Grid>
+        </StackPanel>
+    </Grid>
+</Window>

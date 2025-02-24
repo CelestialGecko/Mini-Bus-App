@@ -1,0 +1,51 @@
+﻿<Window x:Class="TripMaintanance.BusFeedback"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TripMaintanance"
+        mc:Ignorable="d" WindowStyle="None"
+        Title="BusFeedback" Height="440" Width="530">
+    <Grid Background="#FF171717">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="170"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        
+        <TextBox Grid.Row="2" Name="txtBusName" Grid.Column="0" 
+        Margin="5, 5, 5, 5" Background="#FF383838" BorderBrush="#FF383838" 
+        Foreground="White" SelectionBrush="#FF383838" Grid.ColumnSpan="3"
+        FontWeight="Bold"></TextBox>
+        
+        <Label Grid.Row="0" Foreground="White" FontWeight="Bold" 
+               FontSize="72" Grid.ColumnSpan="3">New comment</Label>
+
+        <Label Grid.Row="1" Foreground="White" FontWeight="Bold">Write the bus name here:</Label>
+
+        <Label Grid.Row="3" Foreground="White" FontWeight="Bold">Write comment in here:</Label>
+        
+        <TextBox Grid.Row="4" Name="txtBusComment" Grid.Column="0" 
+        Margin="5, 5, 5, 5" Background="#FF383838" BorderBrush="#FF383838" 
+        Foreground="White" SelectionBrush="#FF383838" Grid.ColumnSpan="3"
+        FontWeight="Bold"></TextBox>
+        
+        <Button Grid.Row="5" Grid.Column="0" Margin="5, 10, 5, 3" Click="btnCreate" 
+                Background="#FF383838" BorderBrush="#FF383838" Foreground="White">
+            Submit
+        </Button>
+        <Button Grid.Row="5" Grid.Column="1" Margin="5, 10, 5, 3" Click="btnExit" 
+                Background="#FF383838" BorderBrush="#FF383838" Foreground="White">
+            Exit
+        </Button>
+    </Grid>
+</Window>

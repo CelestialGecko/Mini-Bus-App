@@ -1,0 +1,207 @@
+﻿<Window x:Class="TripMaintanance.TeacherMaintain"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TripMaintanance"
+        mc:Ignorable="d"
+        Title="TeacherMaintain" Height="460" Width="800">
+    <Grid Background="#FF171717">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0">
+            <Grid>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Label Grid.Row="0" Foreground="White" FontWeight="Bold">Teacher ID:</Label>
+                <TextBox Grid.Row="0" Name="txtTeacherID" Grid.Column="1" 
+                         Margin="5, 5, 5, 5" Background="#FF383838" BorderBrush="#FF383838" 
+                         Foreground="White" SelectionBrush="#FF383838" 
+                         FontWeight="Bold"></TextBox>
+
+                <Label Grid.Row="1" Foreground="White" FontWeight="Bold">Username:</Label>
+                <TextBox Grid.Row="1" Name="txtUsername" Grid.Column="1" 
+                         Margin="5, 5, 5, 5" Background="#FF383838" BorderBrush="#FF383838" 
+                         Foreground="White" SelectionBrush="#FF383838" FontWeight="Bold"></TextBox>
+
+                <Label Grid.Row="2" Foreground="White" FontWeight="Bold">Password:</Label>
+                <TextBox Grid.Row="2" Name="txtPassword" Grid.Column="1" 
+                         Margin="5, 5, 5, 5" Background="#FF383838" BorderBrush="#FF383838" 
+                         Foreground="White" SelectionBrush="#FF383838" FontWeight="Bold"></TextBox>
+
+                <Label Grid.Row="3" Foreground="White" FontWeight="Bold">First name:</Label>
+                <TextBox Grid.Row="3" Name="txtFirstName" Grid.Column="1" 
+                         Margin="5, 5, 5, 5" Background="#FF383838" BorderBrush="#FF383838" 
+                         Foreground="White" SelectionBrush="#FF383838" FontWeight="Bold"></TextBox>
+
+                <Label Grid.Row="4" Foreground="White" FontWeight="Bold">Second name:</Label>
+                <TextBox Grid.Row="4" Name="txtSecondName" Grid.Column="1" 
+                         Margin="5, 5, 5, 5" Background="#FF383838" BorderBrush="#FF383838" 
+                         Foreground="White" SelectionBrush="#FF383838" FontWeight="Bold"></TextBox>
+
+                <Label Grid.Row="5" Foreground="White" FontWeight="Bold">Teacher Type:</Label>
+                <TextBox Grid.Row="5" Name="txtTeacherType" Grid.Column="1" 
+                         Margin="5, 5, 5, 5" Background="#FF383838" BorderBrush="#FF383838" 
+                         Foreground="White" SelectionBrush="#FF383838" FontWeight="Bold"></TextBox>
+
+            </Grid>
+
+            <StackPanel Grid.Row="1" Background="#FF292626" >
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Label Grid.Row="0" Foreground="White" FontWeight="Bold">Google search:</Label>
+                    <TextBox Grid.Row="0" Name="txtSearch" Grid.Column="1" 
+                         Margin="5, 5, 5, 5" Background="#FF383838" BorderBrush="#FF383838" 
+                         Foreground="White" SelectionBrush="#FF383838" 
+                         FontWeight="Bold"></TextBox>
+                    <Button Grid.Row="0" Grid.Column="2" Margin="5" Click="btnSearch" Background="#FF383838" BorderBrush="#FF383838" Foreground="White">
+                        Search
+                    </Button>
+
+                    <Button Grid.Row="0" Grid.Column="3" Margin="5" Click="btnSort" Background="#FF383838" BorderBrush="#FF383838" Foreground="White">
+                        Sort
+                    </Button>
+
+                </Grid>
+            </StackPanel>
+            
+        </StackPanel>
+        <ListView Grid.Row="2" Grid.Column="0"
+        HorizontalAlignment="Stretch" Margin="10, 10, 10, 10"
+        VerticalAlignment="Stretch" Name="TeacherList"  
+        Foreground="Black" FontWeight="Bold" MouseLeftButtonUp="TeacherList_MouseLeftButtonUp">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Teacher ID" 
+                        DisplayMemberBinding="{Binding TeacherID}" 
+                        Width="100"></GridViewColumn>
+                    <GridViewColumn Header="Username" 
+                        DisplayMemberBinding="{Binding Username}" 
+                        Width="100"></GridViewColumn>
+                    <GridViewColumn Header="Password" 
+                        DisplayMemberBinding="{Binding Password}"
+                        Width="100"></GridViewColumn>
+                    <GridViewColumn Header="First name" 
+                        DisplayMemberBinding="{Binding TeacherFirstName}"
+                        Width="100"></GridViewColumn>
+                    <GridViewColumn Header="Second name" 
+                        DisplayMemberBinding="{Binding TeacherSecondName}"
+                        Width="100"></GridViewColumn>
+                    <GridViewColumn Header="Teacher type" 
+                        DisplayMemberBinding="{Binding TeacherType}"
+                        Width="100"></GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+        <StackPanel Grid.Row="3">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="125"/>
+                    <ColumnDefinition Width="125"/>
+                    <ColumnDefinition Width="125"/>
+                    <ColumnDefinition Width="125"/>
+                    <ColumnDefinition Width="125"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <Button Grid.Row="0" Grid.Column="0" Margin="5" Click="btnView" BorderBrush="#FF383838" Background="#FF383838" Foreground="White">
+                    View
+                </Button>
+                <Button Grid.Row="0" Grid.Column="1" Margin="5" Click="btnInsert" Background="#FF383838" BorderBrush="#FF383838" Foreground="White">
+                    Insert
+                </Button>
+                <Button Grid.Row="0" Grid.Column="2" Margin="5" Click="btnUpdate" Background="#FF383838" BorderBrush="#FF383838" Foreground="White">
+                    Update
+                </Button>
+                <Button Grid.Row="0" Grid.Column="3" Margin="5" Click="btnDelete" Background="#FF383838" BorderBrush="#FF383838" Foreground="White">
+                    Delete
+                </Button>
+                <Button Grid.Row="0" Grid.Column="4" Margin="5" Click="btnExit" Background="#FF383838" BorderBrush="#FF383838" Foreground="White">
+                    Exit
+                </Button>
+            </Grid>
+        </StackPanel>
+        
+        <StackPanel Grid.Column="1" Grid.RowSpan="4" Grid.Row="0" 
+                    Background="#FF212121">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="200"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="400"/>
+                </Grid.RowDefinitions>
+
+                <Grid>
+
+                    <TextBlock HorizontalAlignment="Left" Height="34" Margin="55,13,0,0" TextWrapping="Wrap" 
+                   Text="Student" VerticalAlignment="Top" Width="97" FontWeight="Bold" FontSize="22" Foreground="White"/>
+                    <Ellipse HorizontalAlignment="Left" Height="40" Stroke="Black" VerticalAlignment="Top" 
+                 Width="40" Margin="10,10,0,0">
+                        <Ellipse.Fill>
+                            <ImageBrush ImageSource="icons8-male-user-48.png"/>
+                        </Ellipse.Fill>
+                    </Ellipse>
+
+                    <TextBlock HorizontalAlignment="Left" Height="34" Margin="55,58,0,0" TextWrapping="Wrap" x:Name="TClass" Visibility="Hidden"
+                    Text="Class" VerticalAlignment="Top" Width="97" FontWeight="Bold" FontSize="22" Foreground="White"/>
+                    <Ellipse HorizontalAlignment="Left" Height="40" Stroke="Black" VerticalAlignment="Top" x:Name="IClass"
+                    Width="40" Margin="10,55,0,0" Visibility="Hidden">
+                        <Ellipse.Fill>
+                            <ImageBrush ImageSource="icons8-conference-48.png"/>
+                        </Ellipse.Fill>
+                    </Ellipse>
+
+                </Grid>
+
+                <Button Content="Button1" HorizontalAlignment="Left" Margin="0,10,0,0" 
+                        VerticalAlignment="Top" 
+                Width="162" Height="40" Click="StudentButton" Opacity="0.3" Background="{x:Null}"
+                BorderBrush="{x:Null}" Foreground="{x:Null}"/>
+
+                <Button Content="Button1" HorizontalAlignment="Left" Margin="0,55,0,0" 
+                        VerticalAlignment="Top" x:Name="BClass" Visibility="Hidden"
+                Width="162" Height="40" Click="ClassButton" Opacity="0.3" Background="{x:Null}" 
+                BorderBrush="{x:Null}" Foreground="{x:Null}"/>
+
+            </Grid>
+        </StackPanel>
+    </Grid>
+</Window>

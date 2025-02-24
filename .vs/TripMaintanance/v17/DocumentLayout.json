@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\NEA test\\TripMaintanance\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6ECAF241-62B7-4858-A2D0-688346E6590D}|TripMaintanance\\TripMaintanance.csproj|c:\\nea test\\tripmaintanance\\tripmaintanance\\mainmenu.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6ECAF241-62B7-4858-A2D0-688346E6590D}|TripMaintanance\\TripMaintanance.csproj|solutionrelative:tripmaintanance\\mainmenu.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6ECAF241-62B7-4858-A2D0-688346E6590D}|TripMaintanance\\TripMaintanance.csproj|c:\\nea test\\tripmaintanance\\tripmaintanance\\tripstats.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6ECAF241-62B7-4858-A2D0-688346E6590D}|TripMaintanance\\TripMaintanance.csproj|solutionrelative:tripmaintanance\\tripstats.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainMenu.xaml.cs",
+              "DocumentMoniker": "C:\\NEA test\\TripMaintanance\\TripMaintanance\\MainMenu.xaml.cs",
+              "RelativeDocumentMoniker": "TripMaintanance\\MainMenu.xaml.cs",
+              "ToolTip": "C:\\NEA test\\TripMaintanance\\TripMaintanance\\MainMenu.xaml.cs",
+              "RelativeToolTip": "TripMaintanance\\MainMenu.xaml.cs",
+              "ViewState": "AgIAAMAAAAAAAAAAAAAAAMkAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T20:53:05.572Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TripStats.xaml.cs",
+              "DocumentMoniker": "C:\\NEA test\\TripMaintanance\\TripMaintanance\\TripStats.xaml.cs",
+              "RelativeDocumentMoniker": "TripMaintanance\\TripStats.xaml.cs",
+              "ToolTip": "C:\\NEA test\\TripMaintanance\\TripMaintanance\\TripStats.xaml.cs",
+              "RelativeToolTip": "TripMaintanance\\TripStats.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAL4AAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T20:49:07.919Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
